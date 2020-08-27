@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>OSFAcademy</title>
+</head>
+
+<body>
+    <!-------------------------------------------------HEADER-------------------------------------------------------->
+    <header class="header" id="header">
+        <div class="menu-icon">
+          <h3 onclick="handleMenuToggle()">&#9776;</h3>
+        </div>
+        <ul class="nav-items" id="nav-container">
+          <li class="nav">
+            <button class="btn" onclick="spoiler()">
+              SERVICES<span class="triangle" id='triangle'>▾</span>
+            </button>
+    
+            <!-- Accordion mobile -->
+            <div class="accordionWrapper">
+              <div class="accordionItem close">
+                <h5 class="accordionItemHeading">Product Categories</h5>
+                <div class="accordionItemContent">
+                  <ul>
+                    <li><a href="/src/pages/404/404.html">Accessories</a></li>
+                    <li><a href="/src/pages/404/404.html">Alcohol</a></li>
+                    <li><a href="/src/pages/404/404.html">Art</a></li>
+                    <li><a href="/src/pages/404/404.html">Books</a></li>
+                    <li><a href="/src/pages/404/404.html">Drinks</a></li>
+                    <li><a href="/src/pages/404/404.html">Electronics</a></li>
+                    <li><a href="/src/pages/404/404.html">Flowers&Plants</a></li>
+                    <li><a href="/src/pages/404/404.html">Food</a></li>
+                  </ul>
+                </div>
+              </div>
+    
+              <div class="accordionItem close">
+                <h5 class="accordionItemHeading">Sale</h5>
+                <div class="accordionItemContent">
+                  <ul>
+                    <li><a href="/src/pages/404/404.html">Accessories</a></li>
+                    <li><a href="/src/pages/404/404.html">Alcohol</a></li>
+                    <li><a href="/src/pages/404/404.html">Art</a></li>
+                    <li><a href="/src/pages/404/404.html">Books</a></li>
+                    <li><a href="/src/pages/404/404.html">Drinks</a></li>
+                    <li><a href="/src/pages/404/404.html">Electronics</a></li>
+                    <li><a href="/src/pages/404/404.html">Flowers&Plants</a></li>
+                    <li><a href="/src/pages/404/404.html">Food</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav"><a href="/src/pages/404/404.html" class="btn"> <h3>COMPANY</h3></a> </li>
+          <li class="nav"><a href="/src/pages/404/404.html" class="btn"><h3>LIBRARY</h3></a></li>
+          <li class="nav"><a href="/src/pages/404/404.html" class="btn"><h3>CONTACT US</h3></a> </li>
+        </ul>
+        <div class="logo-container">
+          <a href="/index.html">
+            <img class="logo logoMobile" src="/src/img/logoMobile.png" alt="">
+          </a>
+          <div class='logo-container-desk'>
+            <a href="/index.html">
+              <img class="logo logoDesk" src="/src/img/logoDesk.png" alt="">
+            </a>
+            <div class="logoTextCont">
+              <div class="osf">OSF</div>
+              <div class="academy">Academy</div>
+            </div>
+          </div>
+          <!--------------------------------DESKTOP--------------------------->
+          <nav class='nav-desk'>
+            <ul>
+              <li class="h-list-items" onmouseover="showNavD()">SERVUCES<span class="nav-tr">&#9660;</span> </li>
+              <li class="h-list-items"><a href="/src/pages/404/404.html">COMPANY</a></li>
+              <li class="h-list-items"><a href="/src/pages/404/404.html">LIBRARY</a></li>
+              <li class="h-list-items"><a href="/src/pages/404/404.html">CONTACT US</a></li>
+              <li class="h-list-items"><a href="/src/pages/404/404.html">EN<span>&#9660;</span> </a></li>
+              <li class="h-list-items"><a href="/src/pages/404/404.html">$US<span>&#9660;</span> </a></li>
+              <li class="d-figure">
+                  <li> <a href=""><img class="icons" src="/src/img/loope-icon.svg" alt=""></a></li>
+                  <li> <a onclick='showLogin()'> <img class="icons" src="/src/img/user-icon.svg" alt=""></a> </li>
+                  <li> <a href=""> <img class="icons" src="/src/img/hearted-icon.svg" alt=""></a> <span class='icon-number' id='favorite-icon'>1</span> </li>
+                  <li> <a href=""> <img class="icons" src="/src/img/shopping-icon.svg" alt=""></a> <span class='icon-number' id='shopping-icon'>1</span> </li>              
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-----------------------------MEGA MENU DROPDOWN--------------------------------------------->
+        <div onmouseout="showNavD()" id='nav-d' class="nav-d">
+          <div class="nav-list-group">
+            <ul class=''>
+              <li><h4>Product Categories</h4></li>
+              <li><a href="/src/pages/404/404.html">Accessories</a></li>
+              <li><a href="/src/pages/404/404.html">Art</a></li>
+              <li><a href="/src/pages/404/404.html">Books</a></li>
+              <li><a href="/src/pages/404/404.html">Drinks</a></li>
+              <li><a href="/src/pages/404/404.html">Electronics</a></li>
+              <li><a href="/src/pages/404/404.html">Flowers&Plants</a></li>
+              <li><a href="/src/pages/404/404.html">Food</a></li>
+            </ul>
+            <ul class=''>
+              <li><a href="/src/pages/404/404.html">Gadgets</a></li>
+              <li><a href="/src/pages/404/404.html">Garden</a></li>
+              <li><a href="/src/pages/404/404.html">Grocery</a></li>
+              <li><a href="/src/pages/404/404.html">Home</a></li>
+              <li><a href="/src/pages/404/404.html">Jewelry</a></li>
+              <li><a href="/src/pages/404/404.html">Kids&Baby</a></li>
+              <li><a href="/src/pages/404/404.html">Men's Fashion</a></li>
+              <li><a href="/src/pages/404/404.html">Mobile</a></li>
+            </ul>
+            <ul class=''>
+              <li><a href="/src/pages/404/404.html">Motorcycles</a></li>
+              <li><a href="/src/pages/404/404.html">Movies</a></li>
+              <li><a href="/src/pages/404/404.html">Music</a></li>
+              <li><a href="/src/pages/404/404.html">Office</a></li>
+              <li><a href="/src/pages/404/404.html">Pets</a></li>
+              <li><a href="/src/pages/404/404.html">Romantic</a></li>
+              <li><a href="/src/pages/404/404.html">Sport</a></li>
+              <li><a href="/src/pages/404/404.html">Toys</a></li>
+            </ul>
+    
+            <ul class=''>
+              <li><h4>Sale</h4></li>
+              <li><a href="/src/pages/404/404.html">Sports</a></li>
+              <li><a href="/src/pages/404/404.html">Toys</a></li>
+              <li><a href="/src/pages/404/404.html">Travel</a></li>
+              <li><a href="/src/pages/404/404.html">Women's Fashion</a></li>
+              <li><a href="/src/pages/404/404.html">Movies</a></li>
+              <li><a href="/src/pages/404/404.html">Music</a></li>
+              <li><a href="/src/pages/404/404.html">Office</a></li>
+              <li><a href="/src/pages/404/404.html">Grocery</a></li>
+            </ul>
+          </div>
+    
+          <img class="nav-img" src="/src/img/nav-img.svg" alt="nav img">
+        </div>
+    </header>
+  <div id="bugfixer"></div>
+    <main>
+        <div id='login'></div>
+
+        <section class="content">
+            <div class="not-found-header">
+                <p><span><a class="not-found-link" href="/index.html">Home</a></span
+                        class='nf-current-page'>/<span>404</span></p>
+                <div class="nf-header">
+                    <hr>
+                    <h1>404</h1>
+                    <hr>
+                </div>
+            </div>
+
+            <section class="nf-message">
+                <div class="nf-message-content">
+                    <div class="oops">
+                        <h2>Oops!</h2>
+                    </div>
+                    <div class="nf-message-text">
+                        <h3>Sorry, this page could not be found!</h3>
+                        <p>
+                            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa.
+                        </p>
+                        <p><a href="/index.html">Go back to Homepage</a></p>
+
+                        <div class="nf-search">
+                            <h3>Search our site</h3>
+                            <div class="nf-search-input">
+                                <input type="text">
+                                <button><img src="/src/img/loope-icon.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer id='footer'></footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="/src/js/index.js"></script>
+    <script src="/src/js/ajax.js"></script>
+    <script src="/src/js/login.js"></script>
+</body>
+
+</html>
