@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <!-- CSS -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    
+  <title>OSFAcademy</title>
+
+</head>
+<body>
+    <!--------------------------------------------HEADER------------------------------------------------------>
+    <header class="header" id="header">
+        <div class="menu-icon">
+          <h3 onclick="handleMenuToggle()">&#9776;</h3>
+        </div>
+        <ul class="nav-items" id="nav-container">
+          <li class="nav">
+            <button class="btn" onclick="spoiler()">
+              SERVICES<span class="triangle" id='triangle'>▾</span>
+            </button>
+    
+            <!-- Accordion mobile -->
+            <div class="accordionWrapper">
+              <div class="accordionItem close">
+                <h5 class="accordionItemHeading">Product Categories</h5>
+                <div class="accordionItemContent">
+                  <ul>
+                    <li><a href="/src/pages/404/404.html">Accessories</a></li>
+                    <li><a href="/src/pages/404/404.html">Alcohol</a></li>
+                    <li><a href="/src/pages/404/404.html">Art</a></li>
+                    <li><a href="/src/pages/404/404.html">Books</a></li>
+                    <li><a href="/src/pages/404/404.html">Drinks</a></li>
+                    <li><a href="/src/pages/404/404.html">Electronics</a></li>
+                    <li><a href="/src/pages/404/404.html">Flowers&Plants</a></li>
+                    <li><a href="/src/pages/404/404.html">Food</a></li>
+                  </ul>
+                </div>
+              </div>
+    
+              <div class="accordionItem close">
+                <h5 class="accordionItemHeading">Sale</h5>
+                <div class="accordionItemContent">
+                  <ul>
+                    <li><a href="/src/pages/404/404.html">Accessories</a></li>
+                    <li><a href="/src/pages/404/404.html">Alcohol</a></li>
+                    <li><a href="/src/pages/404/404.html">Art</a></li>
+                    <li><a href="/src/pages/404/404.html">Books</a></li>
+                    <li><a href="/src/pages/404/404.html">Drinks</a></li>
+                    <li><a href="/src/pages/404/404.html">Electronics</a></li>
+                    <li><a href="/src/pages/404/404.html">Flowers&Plants</a></li>
+                    <li><a href="/src/pages/404/404.html">Food</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+    
+          <li class="nav"><a href="/src/pages/404/404.html" class="btn"> <h3>COMPANY</h3></a> </li>
+          <li class="nav"><a href="/src/pages/404/404.html" class="btn"><h3>LIBRARY</h3></a></li>
+          <li class="nav"><a href="/src/pages/404/404.html" class="btn"><h3>CONTACT US</h3></a> </li>
+        </ul>
+    
+        <div class="logo-container">
+          <a href="./index.html">
+            <img class="logo logoMobile" src="src/img/logoMobile.png" alt="">
+          </a>
+          <div class='logo-container-desk'>
+            <a href="./index.html">
+              <img class="logo logoDesk" src="src/img/logoDesk.png" alt="">
+            </a>
+            <div class="logoTextCont">
+              <div class="osf">OSF</div>
+              <div class="academy">Academy</div>
+            </div>
+          </div>
+          <!-------------------------------------DESKTOP------------------------------->
+          <nav class='nav-desk'>
+            <ul>
+              <li class="h-list-items" onmouseover="showNavD()">SERVICES<span class="nav-tr">&#9660;</span> </li>
+              <li class="h-list-items"><a href="src/pages/404/404.html"> COMPANY</a></li>
+              <li class="h-list-items"><a href="src/pages/404/404.html"> LIBRARY</a></li>
+              <li class="h-list-items"><a href="src/pages/404/404.html"> CONTACT US</a></li>
+              <li class="h-list-items"><a href="src/pages/404/404.html">EN<span>&#9660;</span> </a></li>
+              <li class="h-list-items"><a href="src/pages/404/404.html">$US<span>&#9660;</span> </a></li>
+              <li class="d-figure">
+                  <li> <a href=""><img class="icons" src="src/img/loope-icon.svg" alt=""></a></li>
+                  <li> <a onclick='showLogin()'> <img class="icons" src="src/img/user-icon.svg" alt=""></a> </li>
+                  <li> <a href=""> <img class="icons" src="src/img/hearted-icon.svg" alt=""></a> <span class='icon-number' id='favorite-icon'>1</span> </li>
+                  <li> <a href=""> <img class="icons" src="src/img/shopping-icon.svg" alt=""></a> <span class='icon-number' id='shopping-icon'>1</span> </li>              
+              </li>
+            </ul>
+          </nav>
+          <!----------------------------------END DESKTOP--------------------------->
+    
+        </div>
+        <!-------------------------------MEGA MENU DROPDOWN--------------------->
+        <div onmouseout="showNavD()" id='nav-d' class="nav-d">
+          <div class="nav-list-group">
+            <ul class=''>
+              <li><h4>Product Categories</h4></li>
+              <li><a href="src/pages/404/404.html">Accessories</a></li>
+              <li><a href="src/pages/404/404.html">Art</a></li>
+              <li><a href="src/pages/404/404.html">Books</a></li>
+              <li><a href="src/pages/404/404.html">Drinks</a></li>
+              <li><a href="src/pages/404/404.html">Electronics</a></li>
+              <li><a href="src/pages/404/404.html">Flowers&Plants</a></li>
+              <li><a href="src/pages/404/404.html">Food</a></li>
+            </ul>
+            <ul class=''>
+              <li><a href="src/pages/404/404.html">Gadgets</a></li>
+              <li><a href="src/pages/404/404.html">Garden</a></li>
+              <li><a href="src/pages/404/404.html">Grocery</a></li>
+              <li><a href="src/pages/404/404.html">Home</a></li>
+              <li><a href="src/pages/404/404.html">Jewelry</a></li>
+              <li><a href="src/pages/404/404.html">Kids&Baby</a></li>
+              <li><a href="src/pages/404/404.html">Men's Fashion</a></li>
+              <li><a href="src/pages/404/404.html">Mobile</a></li>
+            </ul>
+            <ul class=''>
+              <li><a href="src/pages/404/404.html">Motorcycles</a></li>
+              <li><a href="src/pages/404/404.html">Movies</a></li>
+              <li><a href="src/pages/404/404.html">Music</a></li>
+              <li><a href="src/pages/404/404.html">Office</a></li>
+              <li><a href="src/pages/404/404.html">Pets</a></li>
+              <li><a href="src/pages/404/404.html">Romantic</a></li>
+              <li><a href="src/pages/404/404.html">Sport</a></li>
+              <li><a href="src/pages/404/404.html">Toys</a></li>
+            </ul>
+    
+            <ul class=''>
+              <li><h4>Sale</h4></li>
+              <li><a href="src/pages/404/404.html">Sports</a></li>
+              <li><a href="src/pages/404/404.html">Toys</a></li>
+              <li><a href="src/pages/404/404.html">Travel</a></li>
+              <li><a href="src/pages/404/404.html">Women's Fashion</a></li>
+              <li><a href="src/pages/404/404.html">Movies</a></li>
+              <li><a href="src/pages/404/404.html">Music</a></li>
+              <li><a href="src/pages/404/404.html">Office</a></li>
+              <li><a href="src/pages/404/404.html">Grocery</a></li>
+            </ul>
+          </div>
+    
+          <img class="nav-img" src="src/img/nav-img.svg" alt="nav img">
+        </div>
+      </header>
+    <!----------------------------------------------END HEADER-------------------------------------------------------->
+    <div id="bugfixer"></div>
+      <main>
+     <!----------------------------------------------LOGIN------------------------------------------------------------>  
+                <div id="login"></div>
+     <!----------------------------------------------END LOGIN-------------------------------------------------------->
+    <!--------------------------------------COOKIES------------------------------------------------------------------->
+    <div class='cookies invisible'>
+      <div class="cookies-cont">
+        <div class="c-text">
+          <h4 class="c-head">This website uses cookies</h4>
+          <p>
+            OSF uses its own and third-party cookies for statistical purposes, to know your preferences, for website
+            performance and interaction with social media offering publicity tailored to your interests. If you continue
+            browsing, we consider that you accept its use.<br>
+            You can expand this information consulting our <a href="#">Cookies Policy Page</a>.
+          </p>
+        </div>
+        <div class="c-buttons">
+          <button onclick="c_close()" type="button" class="close x" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <button onclick="c_accept()" class='accept'>Accept</button>
+        </div>
+      </div>
+    </div>
+    <!----------------------------------------------END COOKIES------------------------------------------------------>
+    
+    <!-----------------------------------------------------CAROUSEL--------------------------------------------------->
+    <section class="row">
+        <div class="carousel-container">
+          <div class="carousel-img c-img-1 c-visible">
+            <div class="c-cont">
+              <h3>Control and manage any device with cloud solutions </h3>
+              <p>Improve business performance and the user experience with the right mix of Iot technology and processes.
+              </p>
+              <p><a href="src/pages/category-landing/category-landing.html" class='btn-c'>view more</a></p>
+            </div>
+  
+          </div>
+          <div class="carousel-img c-img-2">
+            <div class="c-cont">
+              <h3>Control and manage any device with cloud solutions </h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque rem, doloremque debitis magni officia.
+              </p>
+              <p><a href="src/pages/category-landing/category-landing.html" class='btn-c'>View More</a></p>
+            </div>
+          </div>
+          <div class="carousel-img c-img-3">
+            <div class="c-cont">
+              <h3>Control and manage any device with cloud solutions </h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque rem, doloremque debitis magni officia
+                expedita.</p>
+              <p><a href="src/pages/category-landing/category-landing.html" class='btn-c'>view more</a></p>
+            </div>
+          </div>
+          <div class='carousel-controls custom-radio'>
+            <input class='' onclick="carousel(1)" checked type="radio" name="carousel" id="carousel-1"><label
+              class='radio' for="carousel-1"></label>
+            <input class='' onclick="carousel(2)" type="radio" name="carousel" id="carousel-2"><label class='radio'
+              for="carousel-2"></label>
+            <input class='' onclick="carousel(3)" type="radio" name="carousel" id="carousel-3"><label class='radio'
+              for="carousel-3"></label>
+          </div>
+        </div>
+        <!------------------------------------------END CAROUSEL------------------------------------------------->
+        <!----------------------------------------------SUMMER SALE---------------------------------------------->
+        <aside class="sale-wrap">
+          <div class="sale-cont">
+            <div class="sale-baner">
+              <p class='discount'>55%</p>
+              <p class='sale-baner-heading'>summer sales</p>
+            </div>
+            <div class="under-baner">
+              <h4>Folow us on Facebook</h4>
+              <p>Lorem, ipsum dolor deleniti voluptates</p>
+              <a class="follow" href=""> <img src="src/img/fb-bl.svg" alt=""> Follow</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+      <!-------------------------------------------END SALE------------------------------------------------------>
+      <!--------------------------------------------POPULAR ITEMS------------------------------------------------>
+    <section class='row'>
+        <div class="pop-items-wrap">
+          <div class="pop-items-cont">
+            <h3>Popular Items</h3>
+            <div class="desk">
+              <ul id='pop-items-list' class='pop-items-list'>
+                <li id='p0'>
+                  <div class="pop-li-cont pop-hover">
+                    <img class='' src="src/img/tile-1.svg" alt="">
+                    <div class="text-wrap">
+                      <p class="tile-info"><a href=""> Kristina Dam Oak Table With White Marble Top</a></p>
+                      <p class="tile-price"><a href=""> $799</a></p>
+                    </div>
+                    <div class="buttons">
+                      <a><img name='add-to-cart' src="src/img/Plus.png" alt="" onclick="addToCart()"></a>
+                      <a><img src="src/img/Heart.png" alt="" onclick="addToFavorite()"></a>
+                    </div>
+                  </div>
+  
+                </li>
+  
+                <li id='p1' class=''>
+                  <a href="/src/pages/product-detailed/product-detailed.html"><img src="src/img/tile-2.svg" alt=""></a>
+                  <div class="text-wrap">
+                    <p class="tile-info"><a href="/src/pages/product-detailed/product-detailed.html"> Hay - About A Lounge Chair AAL 93</a></p>
+                    <p class="tile-price"><a name="add-to-cart" onclick='addToCart()'><span class='price'>$699</span><span class='buy'>BUY
+                          NOW</span></a></p>
+                  </div>
+                </li>
+  
+                <li id='p2'class=''>
+                  <div class="pop-li-cont pop-hover">
+                    <img src="src/img/tile-3.svg" alt="">
+                    <div class="text-wrap">
+                      <p class="tile-info"><a href="src/pages/product-detailed/product-detailed.html"> Activate Facial Mask and Charcoal Soap</a></p>
+                      <p class="tile-price"><a href="src/pages/product-detailed/product-detailed.html">$799</a></p>
+                    </div>
+                    <div class="buttons">
+                      <a><img name='add-to-cart' src="src/img/Plus.png" onclick="addToCart()" alt=""></a>
+                      <a><img src="src/img/Heart.png" onclick="addToFavorite()"  alt=""></a>
+                    </div>
+                  </div>
+                </li>
+  
+                <li id='p3' class=''>
+                  <div class="pop-li-cont pop-hover">
+                    <img src="src/img/tile-4.svg" alt="">
+                    <div class="text-wrap">
+                      <p class="tile-info"><a href="src/pages/product-detailed/product-detailed.html"> Cocktail Table Walnut | YES</a></p>
+                      <p class="tile-price"><a href="src/pages/product-detailed/product-detailed.html">$799</a></p>
+                    </div>
+                    <div class="buttons">
+                      <a><img name='add-to-cart' src="src/img/Plus.png" onclick="addToCart()" alt=""></a>
+                      <a><img src="src/img/Heart.png" onclick="addToFavorite()" alt=""></a>
+                    </div>
+                  </div>
+  
+              </ul>
+              <button onclick="load_more()">LOAD MORE <span class="update">↻</span></button>
+            </div>
+            <div class="mobile">
+              <ul class="pop-items-list">
+                <li id='pop-i-m-1'>
+                  <a href="/src/pages/product-detailed/product-detailed.html"><img src="src/img/tile-2.svg" alt=""></a>
+                  <div class="text-wrap">
+                    <p class="tile-info"><a href="">Kristina Dam Oak Table With White Marble Top</a></p>
+                    <p class="tile-price"><a href="">$799</a></p>
+                  </div>
+                </li>
+                <li id='pop-i-m-2' class='not-visible'>
+                  <img src="src/img/tile-2.svg" alt="">
+                  <div class="text-wrap">
+                    <p class="tile-info"><a href="">Hay - About A Lounge Chair AAL 93</a></p>
+                    <p class="tile-price"><a href=""><span class='price'>$699</span><span class='buy'>BUY
+                          NOW</span></a></p>
+                  </div>
+                </li>
+                <li id='pop-i-m-3' class='not-visible'>
+                  <img src="src/img/tile-3.svg" alt="">
+                  <div class="text-wrap">
+                    <p class="tile-info">Activate Facial Mask and Charcoal Soap</p>
+                    <p class="tile-price"><a href="src/pages/404/404.html">$799</a></p>
+                  </div>
+                </li>
+                <li id='pop-i-m-4' class='not-visible'>
+                  <img src="src/img/tile-4.svg" alt="">
+                  <div class="text-wrap">
+                    <p class="tile-info"><a href="">Kristina Dam Oak Table With White Marble</a></p>
+                    <p class="tile-price"><a href="">$799</a></p>
+                  </div>
+                </li>
+              </ul>
+  
+              <div class='radio-cont custom-radio'>
+                <input class='' onclick="carousel(1, 'pop-i-m-1')" checked type="radio" name="p-carousel"
+                  id="p-carousel-1">
+                <label class='radio' for="p-carousel-1"></label>
+  
+                <input class='' onclick="carousel(2, 'pop-i-m-2')" type="radio" name="p-carousel" id="p-carousel-2">
+                <label class='radio' for="p-carousel-2"></label>
+  
+                <input class='' onclick="carousel(3, 'pop-i-m-3')" type="radio" name="p-carousel" id="p-carousel-3">
+                <label class='radio' for="p-carousel-3"></label>
+                <input class='' onclick="carousel(4, 'pop-i-m-4')" type="radio" name="p-carousel" id="p-carousel-4">
+                <label class='radio' for="p-carousel-4"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!---------------------------------------------END POPULAR ITEMS---------------------------------------------->
+      <!--------------------------------------------------BANNER---------------------------------------------------->
+      <section class="row">
+        <div class="banner-wrap">
+          <div class="banner-cont">
+            <h3>Banner OSF Theme</h3>
+            <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          </div>
+        </div>
+      </section>
+      <!-------------------------------------------------END BANNER------------------------------------------------>
+      <!-----------------------------------------------FEATURED PRODUCT-------------------------------------------->
+
+            <section class="row">
+                <div class="fp-wrap">
+                <div class="fp-content">
+                    <div class="fp-head">
+                    <h2>Featured Products</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur error</p>
+                    <div class="fp-buttons">
+                        <button onclick="fpSliderPrev()">&#212;</button>
+                        <hr><p>///</p><hr>
+                        <button onclick="fpSliderNext()">&#215;</button>
+                    </div>
+                    </div>
+        
+                    <div class="fp-slider">
+                    <ul id='fp-slider-list'>
+                        <li>
+                        <img src="src/img/tile-1.svg" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <p class='fp-green'>Awesome</p>
+                        </li>
+                        <li>
+                        <img src="src/img/tile-2.svg" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <p class='fp-green'>Marketing</p>
+                        </li>
+                        <li>
+                        <img src="src/img/tile-3.svg" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <p class='fp-green'>Awesome</p>
+                        </li>
+                        <li>
+                        <img src="src/img/tile-4.svg" alt="">
+                        <p>Lorem ipsum dolor </p>
+                        <p class='fp-green'>Marketing</p>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </section>
+    <!-------------------------------------------END FEATURED PRODUCT--------------------------------------------------> 
+    <!---------------------------------------------BENEFICS CONTENT---------------------------------------------------->
+    <section class="row">
+        <div class='benefits-cont'>
+          <div class="focus">
+            <div class="benf-img">
+              <img src="src/img/focus-img.png" alt="delivery package">
+            </div>
+            <div class="benf-text">
+              <h4>Focus</h4>
+              <p>Our unwavering focus on superior service delivery and building next generation competencies</p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="benf-img">
+              <img src="src/img/method-img.png" alt="delivery package">
+            </div>
+            <div class="benf-text">
+              <h4>Method</h4>
+              <p>A standardized methodology designed to deliver measurable business results and predicatable cost</p>
+            </div>
+            <div class="benf-m">
+              <img src="src/img/method-img.png" alt="delivery package">
+            </div>
+          </div>
+          <div class="knowledge">
+            <div class="benf-img">
+              <img src="src/img/knowledge-img.png" alt="delivery package">
+            </div>
+            <div class="benf-text">
+              <h4>Knowledge</h4>
+              <p>A highly skilled, proactive workforce that reliably improves each client's ROI while mitigating their
+                business risk</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------------------------------------------END BENEFICS CONTENT------------------------------------------->
+      </main>
+      <!-- footer -->
+     <footer id='footer'></footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script> 
+  <script src="src/js/index.js"></script> 
+  <script src="src/js/ajax.js"></script>
+  <script src="src/js/login.js"></script>
+</body>
+</html>
