@@ -104,15 +104,6 @@ function addToFavorite () {
     $('#favorite-icon').text(++favoriteItemsNum);
 }
 //--------------------------------------------------------------------------------------------
-// Scroll to top 
-
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-// ----------------------------------------------------------------------------------------------
-
 //  Read More 
 
 function readMore() {
@@ -138,13 +129,7 @@ function toggleFilter() {
     }
 
 }
-//current year
-setTimeout($(document).ready( () => {
-    $(".year").text(new Date().getFullYear());
-}), 5000);
-//----------------------------------------------------------------------------------------
-// changing main img on product page
-
+//Change image on product page
 function changeImg(imgNum) {
     document.getElementById('mainImg').src = `/src/img/pdet${imgNum}.jpg`
 }

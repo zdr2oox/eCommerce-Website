@@ -1,13 +1,10 @@
-//Login Show 
-
+//Login Show ---------------->
 function showLogin() {
     console.log('show')
     $('.login-background').removeClass('login-invis');
     $('.login-wrap').removeClass('login-invis');
 }
-
-
-//Login Close 
+//Login Close ------------------>
 document.addEventListener('keydown', function(e) {
 if( e.key === 'Escape') loginClose()
 });
@@ -21,9 +18,7 @@ if (!element.classList.contains("login-invis")){
     console.log("done")
 }
 }
-
-
-//Login validation
+//Login validation-------------------->
 const numbers = /[0-9]/g;
 const upperCaseLetters = /[A-Z]/g;
 const specials = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]+$/g
@@ -43,10 +38,7 @@ function validateLogin(event) {
         $('.invalid').text('');
     }
 }
-
-
-//Login toggle password visibility 
-
+//Login toggle password visibility ------------------->
 function showPass() {
     const pass = document.getElementById('password');
     if (pass.type === 'password') {

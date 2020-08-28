@@ -1,8 +1,6 @@
 
-// Ajax for Featured Products
-
+// Ajax for Featured Products------------------------------>
 let fpCounter = 0;
-
 async function loadSlide() {
     let content = '<ul>';
     let requestSlides = new XMLHttpRequest();
@@ -33,7 +31,7 @@ async function loadSlide() {
     requestSlides.open("GET", '/popular-items.json');
     requestSlides.send();
 }
-//Popular items loading
+//Popular items loading---------------------------->
 let counter = 0;
 const load_more = () => {
     let content = '';
@@ -75,7 +73,7 @@ const load_more = () => {
     requestItems.open("GET", '/popular-items.json');
     requestItems.send();
 }
-//Footer 
+//Footer --------------------------------->
 function footer() {
     let requestFooter = new XMLHttpRequest();
     requestFooter.onreadystatechange = () => {
@@ -87,7 +85,7 @@ function footer() {
     requestFooter.send();    
 }
 footer();
-//Login 
+//Login ------------------------------>
 function login() {
     let requestLogin = new XMLHttpRequest();
     requestLogin.onreadystatechange = () => {
